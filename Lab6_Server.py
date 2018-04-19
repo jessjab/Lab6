@@ -92,5 +92,6 @@ if UDP_or_TCP == "TCP":
             conn.sendto(RETURN_MESSAGE,addr)
             DISCONNECT_TIME = time.asctime(time.localtime(time.time()))
             print DISCONNECT_TIME, "address", addr, "disconnected"
+            break
 
     conn.close()
