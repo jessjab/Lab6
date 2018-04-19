@@ -51,6 +51,7 @@ if UDP_or_TCP == "TCP":
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((SERVER_IP_ADDRESS, PORT_NO_int))
     s.send(MESSAGE_TO_SEND_TCP)
+    print >>sys.stderr, 'waiting to receive message from server'
     #print >>sys.stderr, 'sent %s bytes to %s' % (sent, SERVER_IP_ADDRESS)
     MESSAGE_BACK = s.recv(1024)
     #print >>sys.stderr, 'received %s bytes back from %s' % (len(DATA_BACK), ADDR)
